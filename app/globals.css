@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+	--gradient: hsl(#5f7adb);
+
+	--background: hsl(241 40.95% 4.96%);
+	--foreground: hsl(241 6.3% 98.1%);
+
+	--muted: hsl(241 31.5% 18.6%);
+	--muted-foreground: hsl(241 6.3% 56.2%);
+
+	--popover: hsl(241 52.4% 8.06%);
+	--popover-foreground: hsl(241 6.3% 98.1%);
+
+	--card: hsl(241 52.4% 8.06%);
+	--card-foreground: hsl(241 6.3% 98.1%);
+
+	--border: hsl(241 31.5% 18.6%);
+	--input: hsl(241 31.5% 18.6%);
+
+	--primary: hsl(241 63% 62%);
+	--primary-foreground: hsl(241 6.3% 6.2%);
+
+	--secondary: hsl(241 31.5% 18.6%);
+	--secondary-foreground: hsl(241 6.3% 98.1%);
+
+	--accent: hsl(241 31.5% 18.6%);
+	--accent-foreground: hsl(241 6.3% 98.1%);
+
+	--destructive: hsl(0 62.8% 30.6%);
+	--destructive-foreground: hsl(241 6.3% 98.1%);
+
+	--ring: hsl(241 63% 62%);
+
+	--radius: 0.5rem;
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--color-chart-1: var(--chart-1);
+	--color-chart-2: var(--chart-2);
+	--color-chart-3: var(--chart-3);
+	--color-chart-4: var(--chart-4);
+	--color-chart-5: var(--chart-5);
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+	--color-sidebar: var(--sidebar);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}

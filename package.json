@@ -5,14 +5,33 @@
 		"build": "next build"
 	},
 	"dependencies": {
+		"@designbycode/tailwindcss-text-shadow": "^2.2.1",
+		"@mdx-js/loader": "^3.1.0",
+		"@mdx-js/react": "^3.1.0",
+		"@next/mdx": "^15.2.0",
+		"@radix-ui/react-menubar": "^1.1.6",
+		"@radix-ui/react-navigation-menu": "^1.2.5",
+		"@tabler/icons": "^3.30.0",
+		"@tabler/icons-react": "^3.30.0",
+		"@tailwindcss/postcss": "^4.0.9",
+		"@types/mdx": "^2.0.13",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.477.0",
 		"next": "^15.1.7",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
+		"react-dom": "^19.0.0",
+		"sugar-high": "^0.9.3",
+		"tailwind-merge": "^3.0.2",
+		"tailwindcss": "^4.0.9",
+		"tailwindcss-animate": "^1.0.7"
 	},
 	"devDependencies": {
-		"@types/node": "^22.13.4",
+		"@types/node": "^22.13.8",
 		"@types/react": "^19.0.8",
 		"@types/react-dom": "^19.0.3",
+		"postcss": "^8.5.3",
+		"postcss-simple-vars": "^7.0.1",
 		"typescript": "^5.7.3"
 	}
 }
