@@ -28,6 +28,16 @@ const projects: NoteworthyProjects[] = [
 		title: "UwCartridgeWinkel",
 		intro: "A Dutch webshop focusing on ink cartridges, toners, (photo) paper and office supplies.",
 	},
+	{
+		key: "react-migration",
+		title: "React 15 to React 18 Migration",
+		intro: "The migration of a full, in-use project from React 15 to React 18",
+	},
+	{
+		key: "dotnet-to-react",
+		title: "Migration of .NET to React",
+		intro: "The migration of a ~20 year old monolith to React",
+	},
 ]
 export const metadata: Metadata = {
 	title: "Projects",
@@ -35,7 +45,7 @@ export const metadata: Metadata = {
 }
 export default function Projects() {
 	return (
-		<main className="w-full mx-auto xl:w-1/2">
+		<main className="w-full mx-auto xl:w-1/2 mb-14">
 			<div className="flex flex-col items-center justify-center gap-4">
 				<h1 className="h-fit scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
 					Noteworthy projects

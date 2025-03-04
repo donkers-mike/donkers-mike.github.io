@@ -13,7 +13,7 @@ export default function GithubProfiles() {
 			<h1 className="text-2xl text-white my-2">
 				I have two separate GitHub accounts
 			</h1>
-			<div className="grid grid-cols-2 gap-4">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 				<Card>
 					<CardContent className="flex h-full">
 						<div className="flex flex-col justify-between">

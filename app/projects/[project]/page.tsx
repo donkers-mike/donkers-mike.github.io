@@ -11,6 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			String(project).slice(1),
 	}
 }
+
 export default async function ProjectPage({
 	params,
 }: {
@@ -32,5 +33,7 @@ export function generateStaticParams() {
 		{ project: "crownstudent" },
 		{ project: "stultiens" },
 		{ project: "ucw" },
+		{ project: "react-migration" },
+		{ project: "dotnet-to-react" },
 	]
 }

@@ -50,7 +50,10 @@ const components = {
 		/>
 	),
 	ul: (props: ListProps) => (
-		<ul className="ml-6 list-disc [&>li]:mt-2" {...props} />
+		<ul
+			className="ml-6 list-disc text-muted-foreground [&>li]:mt-2"
+			{...props}
+		/>
 	),
 	li: (props: ListItemProps) => <li className="pl-1" {...props} />,
 	em: (props: ComponentPropsWithoutRef<"em">) => (

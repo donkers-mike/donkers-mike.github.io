@@ -1,0 +1,53 @@
+import Image from "next/image"
+import {
+	IconBrandReact,
+	IconBrandNodejs
+} from "@tabler/icons-react"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+
+<AspectRatio ratio={16 / 9}>
+	<Image
+		className="rounded-md shadow-md object-cover"
+		fill
+		priority
+		sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+		src="/dotnet-to-react.png"
+		alt="An image to symbolize the migration from .NET to React"
+	/>
+</AspectRatio>
+# Migration of .NET to React
+---
+> This migration plan was made for an in-house software platform that focused on supply-chain management
+---
+### Tech Stack
+---
+###### <IconBrandReact /> [React](https://react.dev/)
+Core of the software platform's front-end in this plan.
+
+---
+### Goal of the plan
+---
+The goal behind the plan was to replace the currently existing ~20 year old monolith of code with a headless solution. This monolith was filled with tons of legacy code, a lot of unclear functionality, some even no longer being relevant yet remaining in the codebase because "it might still be in use, but we aren't sure".
+
+---
+### Challenges
+---
+This plan came with a lot of challenges, the first being my lack of knowledge of the platform (I had just started at the company and from day one, I was tasked with making this plan).
+
+Next came the challenge of choosing the right technology according to the needs of the platform as well as the knowledge in the company, given that it was a very front-facing platform, the front-end needed to be fast, reliable and easy to understand for future developers. This lead me to choosing React for the front-end due to my own knowledge, the knowledge that was in the company as well as the community behind React being the greatest.
+
+Once the choice for React was made, it came down to setting up a roadmap for the new platform, this was divided into multiple different sections;
+- Setting up the foundation
+- Connecting to the existing back-end and seeing if and where issues pop up
+- Building a re-usable, future-proof and modular front-end
+<br/>
+The latter in this list turned out to be the biggest undertaking, due to the existing platform consisting of features upon features within features, it was very challenging to figure out exactly how to break down the platform into different modules/components. We eventually decided on looking at what the platform needs to be rather than looking at what it is now and using that as a base.
+
+Once we decided on taking a step back from the current platform and looking at it as "copy of", we were able to quickly identify the needed structure, components and modules.
+
+---
+### Final words
+---
+Sadly, this plan never came to fruition. The company decided to shelve it for the time being.
+
+(Read more about this [here](/resume#chainpoint))

@@ -1,0 +1,50 @@
+import Image from "next/image"
+import {
+	IconBrandReact,
+	IconBrandNodejs
+} from "@tabler/icons-react"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+
+<AspectRatio ratio={16 / 9}>
+	<Image
+		className="rounded-md shadow-md object-cover"
+		fill
+		priority
+		sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+		src="/react-migration.png"
+		alt="An image to symbolize the migration from React v15 to React v18"
+	/>
+</AspectRatio>
+# Migration of React 15 to React 18
+___
+> This migration was for an in-house software platform in the fintech world. The company was growing from a start-up to a scale-up and thus had software which was lagging behind in terms of code due to the fast-moving environment.  
+___  
+### Tech stack:
+___
+###### <IconBrandReact /> [React](https://react.dev/)
+Core of the software platform's front-end.
+###### <Image width="20" height="20" src="/material-ui.svg" alt="Material UI logo" /> [Material UI](https://mui.com/)
+Component library from which every component in the software platform was taken.
+######  <IconBrandNodejs /> [NodeJS](https://nodejs.org/en)
+NodeJS was used for the stand-alone API.
+
+---
+### My Responsibilities
+---
+My responsibilities within this project were to not only maintain the current codebase and handle support for this codebase, but were also to migrate said codebase to the then latest React version (React 18). This meant I was tasked with looking through, rewriting, rebuilding and optimising every part of the platform when it comes to the front-end. Prior to this undertaking I sat down and looked at everything that needed to be done, from removing deprecated functions to replacing/updating dependencies.
+<br/>
+It can be summarized quite simply, the "old" platform heavily leaned on class components, which were deprecated in React <strong>16</strong>. This meant they all had to be moved over to functional components in React 18. During this migration, we took the chance to also look at ways where we could, without all too much scope-creep, improve the speed of the application.
+
+---
+### Challenges
+---
+As mentioned before, this was a project that meant migrating the existing codebase, without building a new codebase and while keeping the platform running. This meant that the biggest challenge was the migration itself, simply updating the dependencies would cause the whole application to crash. So we had to go about it wisely. What we ended up doing was to fork off of the current codebase and put a halt on new features, this meant that we'd only be doing bugfixes in the old codebase and would fully focus on migrating beside that. 
+
+By doing it this way, we prevented the migration from forcing us to build an entirely new platform, but could instead "simply" rewrite the existing code to React 18 compatible code.
+
+---
+### Looking back
+---
+Looking back on this project, I'd have made several different choices, but it is as they say... hindsight is a wonderful thing.
+
+We made several wrong choices when it comes to this migration, the first and foremost being that we would have been better off rebuilding the codebase from scratch. Since migrating it as we did, only had us jump through hoops to get it "as it was". The next being capacity, there weren't enough people to properly go about a migration of this scale (there was a single front-end developer, me.).
