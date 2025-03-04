@@ -1,0 +1,68 @@
+import {
+	IconBrandGraphql,
+	IconBrandLaravel,
+	IconBrandNodejs,
+	IconBrandReact,
+	IconBrandWordpress,
+	IconJson,
+	IconBrandSass
+} from "@tabler/icons-react"
+import Image from "next/image"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+
+<AspectRatio ratio={16 / 9}>
+	<Image
+		className="rounded-md shadow-md object-cover"
+		fill
+		priority
+		sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+		src="/crownstudent.png"
+		alt="Crownstudent configurator preview"
+	/>
+</AspectRatio>
+# Crownstudent
+___
+[Visit the site here](https://crownstudent.com)
+___
+>Crownstudent is a Swedish e-commerce company that deals in configurable items surrounding graduations. These items, specifically the caps, are traditionally worn during graduation in Sweden.  
+___  
+### Tech stack:
+___
+######  <IconBrandReact /> [React](https://react.dev/)
+Used for the entire front-end of the site
+######  <Image width="20" height="20" src="/magento-2-logo.svg" alt="magento 2 logo" /> [Magento](https://business.adobe.com/nl/products/magento/magento-commerce.html)
+Used to store all products, configurator options and handle orders
+###### <IconBrandWordpress /> [WordPress](https://wordpress.com/)
+Used for content that did not need anything other sources
+######  <IconBrandLaravel /> [Lumen](https://laravel.com/)
+A custom API built in Lumen to generate JSON objects that the configurator could work with 
+######  <IconBrandNodejs /> [NodeJS](https://nodejs.org/en)
+NodeJS was used as a layer between the React front-end and the data sources to prevent React from needing to know exactly what to get where.
+###### <IconBrandGraphql /> [GraphQL](https://graphql.org/)
+We used GraphQL to allow our developers to only request what they need as well as to move more towards reusable and extensible queries.
+###### <IconJson /> [jsonpath](https://github.com/dchester/jsonpath)
+The choice for jsonpath came when we realized (after the project had started) that the datasets for a configuration (JSON) we getting far too large and too unpredictable to properly handle, jsonpath assisted by allowing us to run queries on the json.
+###### <IconBrandSass /> [SCSS](https://sass-lang.com/)
+SCSS was our preprocessor of choice within this company and thus also the preprocessor for this project.
+___
+### My Responsibilities
+___
+My responsibilities within this project were for 99% in the React front-end. Most of my work went into the configurator's options and the building of said options based on the dataset given. This meant that I had to find a way to properly look through the dataset (which could exceed 10.000 lines of JSON) without affecting performance too much. This lead me (after a helpful tip from a colleague) to jsonpath, which we used to make the search for nodes in the dataset much faster and more predictable. Leading us to being able to render (by default or conditionally) any and all configuration options with their respective elements (once we had those built).
+<br />
+Within my responsibilities I used the following tech:
+###### <IconBrandReact /> [React](https://react.dev/)
+###### <IconBrandSass /> [SCSS](https://sass-lang.com/)
+###### <IconJson /> [jsonpath](https://github.com/dchester/jsonpath/)
+###### <IconBrandGraphql /> [GraphQL](https://graphql.org/)
+---
+### Challenges
+___
+###### Framework challenges
+This project came with many challenges, what we had planned, didn't have a clear-cut path to success due to the different systems having to work together. We initially looked at the front-end side to see what would be the most optimal to use and eventually landed on React due to the knowledge for this framework already being present. After this, the question became "How are we going to deal with the rendering?", which had us looking at Magento and how configurations are defined there, which we used in our dataset to identify which elements (built in React) we'd have to render. This turned the entirety of the front-end into a data-driven front-end. Most of the elements, configuration options and product-related elements in the sidebar of the configurator are built based on the dataset received.
+<br />
+###### Performance
+Due to the configurator handling such big datasets, a 3D renderer and conditional rendering based on choices, we had to be very mindful of performance. For the 3D renderer, we were dependent on a third party, but for the other systems, we were the ones in control. This meant that, while we were working on the configurator, we always had to ask ourselves: "How will this impact performance?". Eventually we landed on keeping our components (which we rendered based on the data) as simple as we could, leaving the styling etc.. to be done on a more global level. This gave us a decent boost in performance. Besides the aforementioned, we also looked at how we can ensure that images, icons and other media is loaded in before the user needs to see them. This was done through preloads, optimistic rendering with use of skeletons and (pre)caching.
+___
+### Final words
+___
+All in all, Crownstudent was a very fun, challenging and educational project for me. I've learnt a lot about limitations within certain techniques but also about the possibilities within them.

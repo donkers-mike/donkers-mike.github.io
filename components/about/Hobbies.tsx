@@ -34,7 +34,7 @@ export default function Hobbies() {
 					<span key={hobby.key} className="flex">
 						<hobby.icon className="mr-2" />
 						<div className="w-full justify-between">
-							<strong>{hobby.title}: </strong>
+							<strong>{hobby.title} </strong>
 							<br />
 							<span className="text-muted-foreground">
 								{hobby.text}

@@ -1,0 +1,38 @@
+import {
+IconBrandReact
+} from "@tabler/icons-react"
+
+import Image from "next/image"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+
+<AspectRatio ratio={16 / 9}>
+	<Image
+		sizes="100vw"
+		className="rounded-md shadow-md object-cover"
+		fill
+		priority
+		src="/stultiens.png"
+		alt="Stultiens configurator preview"
+	/>
+</AspectRatio>
+# Stultiens nameplate configurator
+___
+[Visit the site here](https://www.namenenzo.nl/)
+___
+> Stultiens is a Dutch group that specialises in personalized products, they have a variety of products they offer among which are nameplates, stamps and more!
+___
+### Tech Stack:
+___
+###### <IconBrandReact /> React
+The front-end consisted of base React, this app was to be implemented in a Magento 2 site as a way for customers to customize their product.
+######  <Image width="20" height="20" src="/magento-2-logo.svg" alt="magento 2 logo" /> Magento 
+Magento was used for the main path of the customer journey.
+___
+### My Responsibilities
+___
+My Responsibilities within this project were limited to the React front-end, here I mostly worked on all the functionalities of said front-end as well as core functionalities of the configurator.
+
+---
+### Challenges
+___
+Within this project, the biggest challenge was getting what was visible in the configurator to perfectly reflect the end result. We had quite a few issues with this when it came to converting sizes from the actual result to the configurator and vice-versa. We eventually got to a point where we had an error margin that was on the same level as the manufacturing error margin.

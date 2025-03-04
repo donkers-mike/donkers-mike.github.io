@@ -6,17 +6,20 @@ import Image from "next/image"
 
 export default function Home() {
 	return (
-		<main className="w-full mx-auto md:w-2/3">
+		<main className="w-full mx-auto xl:w-5/6 2xl:w-2/3">
 			<div className="headline flex w-full mx-auto md:w-8/12 gap-15 items-center py-10">
-				<div className="w-1/3 md:w-1/2 flex justify-end">
-					<Image
-						src="/mugshot.jpg"
-						alt="Picture of Mike Donkers"
-						width={200}
-						height={200}
-						priority
-						className="rounded-full"
-					/>
+				<div className="w-1/3 flex justify-end">
+					<div className="w-48">
+						<Image
+							src="/mugshot.jpg"
+							alt="Picture of Mike Donkers"
+							width="0"
+							height="0"
+							sizes="100vw"
+							className="rounded-full"
+							style={{ width: "100%", height: "auto" }}
+						/>
+					</div>
 				</div>
 				<div className="w-1/2">
 					<h1 className="h-fit scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -28,7 +31,7 @@ export default function Home() {
 					</p>
 				</div>
 			</div>
-			<div className="grid grid-flow-row md:grid-flow-col gap-4">
+			<div className="grid grid-flow-row xl:grid-flow-col gap-4">
 				<Personalia />
 				<Education />
 				<Hobbies />

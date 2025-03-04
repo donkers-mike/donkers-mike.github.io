@@ -1,5 +1,4 @@
 import React, { ComponentPropsWithoutRef } from "react"
-import Link from "next/link"
 import { highlight } from "sugar-high"
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">
@@ -8,11 +7,12 @@ type ListProps = ComponentPropsWithoutRef<"ul">
 type ListItemProps = ComponentPropsWithoutRef<"li">
 type AnchorProps = ComponentPropsWithoutRef<"a">
 type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">
+type ThematicBreakProps = ComponentPropsWithoutRef<"hr">
 
 const components = {
 	h1: (props: HeadingProps) => (
 		<h1
-			className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
+			className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mt-2"
 			{...props}
 		/>
 	),
@@ -34,8 +34,14 @@ const components = {
 			{...props}
 		/>
 	),
+	h6: (props: HeadingProps) => (
+		<h6
+			className="scroll-m-20 text-lg font-semibold tracking-tight flex gap-2 items-center"
+			{...props}
+		/>
+	),
 	p: (props: ParagraphProps) => (
-		<p className="leading-7 [&:not(:first-child)]:mt-6" {...props} />
+		<p className="leading-7 text-muted-foreground" {...props} />
 	),
 	ol: (props: ListProps) => (
 		<ol
@@ -44,7 +50,7 @@ const components = {
 		/>
 	),
 	ul: (props: ListProps) => (
-		<ul className="my-6 ml-6 list-disc [&>li]:mt-2" {...props} />
+		<ul className="ml-6 list-disc [&>li]:mt-2" {...props} />
 	),
 	li: (props: ListItemProps) => <li className="pl-1" {...props} />,
 	em: (props: ComponentPropsWithoutRef<"em">) => (
@@ -54,28 +60,12 @@ const components = {
 		<strong className="font-medium" {...props} />
 	),
 	a: ({ href, children, ...props }: AnchorProps) => {
-		const className =
-			"text-blue-500 hover:text-blue-700 dark:text-gray-400 hover:dark:text-gray-300 dark:underline dark:underline-offset-2 dark:decoration-gray-800"
-		if (href?.startsWith("/")) {
-			return (
-				<Link href={href} className={className} {...props}>
-					{children}
-				</Link>
-			)
-		}
-		if (href?.startsWith("#")) {
-			return (
-				<a href={href} className={className} {...props}>
-					{children}
-				</a>
-			)
-		}
 		return (
 			<a
 				href={href}
 				target="_blank"
 				rel="noopener noreferrer"
-				className={className}
+				className="text-white hover:underline"
 				{...props}
 			>
 				{children}
@@ -126,6 +116,7 @@ const components = {
 	blockquote: (props: BlockquoteProps) => (
 		<blockquote className="mt-6 border-l-2 pl-6 italic" {...props} />
 	),
+	hr: (props: ThematicBreakProps) => <hr className="my-4" {...props} />,
 }
 
 declare global {

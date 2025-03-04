@@ -5,12 +5,16 @@
 		"build": "next build"
 	},
 	"dependencies": {
+		"@coreui/icons": "^3.0.1",
+		"@coreui/icons-react": "^2.3.0",
 		"@designbycode/tailwindcss-text-shadow": "^2.2.1",
 		"@mdx-js/loader": "^3.1.0",
 		"@mdx-js/react": "^3.1.0",
 		"@next/mdx": "^15.2.0",
+		"@radix-ui/react-aspect-ratio": "^1.1.2",
 		"@radix-ui/react-menubar": "^1.1.6",
 		"@radix-ui/react-navigation-menu": "^1.2.5",
+		"@radix-ui/react-progress": "^1.1.2",
 		"@radix-ui/react-slot": "^1.1.2",
 		"@tabler/icons": "^3.30.0",
 		"@tabler/icons-react": "^3.30.0",

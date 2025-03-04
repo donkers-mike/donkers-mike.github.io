@@ -1,0 +1,44 @@
+import {
+IconBrandCss3
+} from "@tabler/icons-react"
+import Image from "next/image"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+
+<AspectRatio ratio={16 / 9}>
+	<Image
+		sizes="100vw"
+		className="rounded-md shadow-md object-cover"
+		fill
+		priority
+		src="/ucw.png"
+		alt="Stultiens configurator preview"
+	/>
+</AspectRatio>
+# UwCartridgeWinkel
+___
+[Visit the site here](https://www.uwcartridgewinkel.nl/)
+___
+> UwCartridgeWinkel (UCW) is a webshop that offers a range of products in the office supply category. Their main focus is everything surrounding ink cartridges and printing supplies.
+___
+### Tech Stack
+___
+###### <IconBrandCss3 /> [LESS](https://lesscss.org/)
+LESS was our CSS preprocessor of choice for this project.
+######  <Image width="20" height="20" src="/magento-2-logo.svg" alt="magento 2 logo" /> Magento 
+Magento was used for the entirety of the project as the only technology.
+___
+### My Responsibilities
+___
+My responsibilities within this project were mostly limited to the front-end in Magento. I did pick up several tasks for the back-end, but these weren't major tasks nor were they impactful to the functioning of the website. 
+Within my responsibilities I used the following tech:
+
+###### <IconBrandCss3 /> [LESS](https://lesscss.org/)
+######  <Image width="20" height="20" src="/magento-2-logo.svg" alt="magento 2 logo" /> [Magento](https://business.adobe.com/nl/products/magento/magento-commerce.html)
+___
+### Challenges
+___
+UwCartridgeWinkel was the first project I did as a de-facto lead developer. I could lean on other developers if I needed to, but the responsibility was mine and mine alone. During the development process, the backend tasks were mostly outsourced to a third party, wheras the frontend tasks were my responsibility. The challenges here were mostly on the level of communication, both with the third party developers as well as with the customer. During the project I had a lot of meetings with said customer to fine-tune what the result should eventually be, tweaking features, adding features (if within scope) etc... 
+<br/>
+During this process I reported back to the person who, back then, was the one who made the contract with the customer. Although this was mostly for time spent, appointment scheduling and status reports.
+<br/>
+With UwCartridgeWinkel we wanted to go back to what Magento 2 did out-of-the-box. Which is something we strayed away from at the time, we were using an aftermarket SASS-based library for the front-end. With UwCartridgeWinkel we decided to go back to LESS and keep it close to the base that Magento gave us. This meant a complete change of though processes for me since i was used to doing everything through SCSS. Looking back on this, it wasn't that much of a different approach, we did however need to go much further to get things done than we would've liked. Especially in terms of overriding Magento styling.

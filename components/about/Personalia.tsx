@@ -5,8 +5,9 @@ import {
 	IconMapPinHeart,
 } from "@tabler/icons-react"
 import { PersonalInfoItem } from "./types"
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
+import Languages from "./Languages"
 
 export default function Personalia() {
 	const personal_info: PersonalInfoItem[] = [
@@ -47,9 +48,9 @@ export default function Personalia() {
 					<span key={info.key} className="flex">
 						<info.icon className="mr-2" />
 						<div className="flex w-full justify-between">
+							<span>{info.title}: </span>
 							{info.link ? (
 								<>
-									<span>{info.title}: </span>
 									<Link
 										href={info.link}
 										target="_blank"
@@ -60,7 +61,6 @@ export default function Personalia() {
 								</>
 							) : (
 								<>
-									<span>{info.title}: </span>
 									<span className="text-muted-foreground">
 										{info.text}
 									</span>
@@ -69,6 +69,7 @@ export default function Personalia() {
 						</div>
 					</span>
 				))}
+				<Languages />
 			</CardContent>
 		</Card>
 	)
