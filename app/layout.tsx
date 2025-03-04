@@ -3,7 +3,6 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Image from "next/image"
-
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -20,7 +19,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className={`dark ${inter.className}`}>
-			<body className="p-2">
+			<body className="min-h-full p-2 mb-14">
 				<div className="w-full p-3 justify-center flex">
 					<Image
 						src="/logo.svg"
