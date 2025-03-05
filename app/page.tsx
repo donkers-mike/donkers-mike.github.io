@@ -6,7 +6,7 @@ import Image from "next/image"
 import mugshot from "@/public/mugshot.jpg"
 export default function Home() {
 	return (
-		<main className="w-full mx-auto xl:w-5/6 2xl:w-3/5">
+		<main className="w-full mx-auto xl:w-5/6 2xl:w-3/5 mb-14">
 			<div className="headline flex w-full mx-auto md:w-8/12 gap-15 items-center py-10">
 				<div className="w-1/3 flex justify-end">
 					<div className="w-48">
