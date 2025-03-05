@@ -18,7 +18,9 @@ export default function Contact() {
 				<h1 className="h-fit scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
 					Contact me
 				</h1>
-				<p>I look forward to hearing from you!</p>
+				<p className="text-muted-foreground">
+					I look forward to hearing from you!
+				</p>
 			</div>
 			<div className="grid grid-cols-1 xl:grid-cols-2 gap-4 mt-8">
 				<Card>

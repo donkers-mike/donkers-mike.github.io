@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React, { ComponentPropsWithoutRef } from "react"
 import { highlight } from "sugar-high"
 
@@ -63,6 +64,17 @@ const components = {
 		<strong className="font-medium" {...props} />
 	),
 	a: ({ href, children, ...props }: AnchorProps) => {
+		if (href?.startsWith("/")) {
+			return (
+				<Link
+					href={href}
+					className="text-white hover:underline"
+					{...props}
+				>
+					{children}
+				</Link>
+			)
+		}
 		return (
 			<a
 				href={href}

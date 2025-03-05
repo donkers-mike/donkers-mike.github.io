@@ -7,6 +7,8 @@ import Breadcrumb from "@/components/Breadcrumb"
 import Link from "next/link"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { ArrowUpToLine } from "lucide-react"
+import logo from "@/public/logo.svg"
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -30,17 +32,10 @@ export default function RootLayout({
 			<body className="min-h-full p-2 mb-15">
 				<div className="w-full p-3 justify-center flex">
 					<Link href="/" className="w-28">
-						<Image
-							src="/logo.svg"
-							width="0"
-							height="0"
-							sizes="100vw"
-							style={{ width: "100%", height: "auto" }}
-							alt="logo"
-						/>
+						<Image src={logo} alt="logo" priority />
 					</Link>
 				</div>
-				<div className="w-full mx-auto md:w-1/2 my-2">
+				<div className="w-full mx-auto md:w-1/2 my-2 flex gap-4 items-center">
 					<Breadcrumb />
 				</div>
 				{children}

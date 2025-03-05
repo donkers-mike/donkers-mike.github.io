@@ -3,7 +3,7 @@ import GithubProfiles from "@/components/about/GithubProfiles"
 import Hobbies from "@/components/about/Hobbies"
 import Personalia from "@/components/about/Personalia"
 import Image from "next/image"
-
+import mugshot from "@/public/mugshot.jpg"
 export default function Home() {
 	return (
 		<main className="w-full mx-auto xl:w-5/6 2xl:w-2/3">
@@ -11,13 +11,9 @@ export default function Home() {
 				<div className="w-1/3 flex justify-end">
 					<div className="w-48">
 						<Image
-							src="/mugshot.jpg"
+							src={mugshot}
 							alt="Picture of Mike Donkers"
-							width="0"
-							height="0"
-							sizes="100vw"
 							className="rounded-full"
-							style={{ width: "100%", height: "auto" }}
 						/>
 					</div>
 				</div>

@@ -12,8 +12,8 @@ export default [
 		icon: IconHome,
 	},
 	{
-		text: "Resume",
-		url: "/resume",
+		text: "Work Experience",
+		url: "/work-experience",
 		icon: IconFileCv,
 	},
 	{
