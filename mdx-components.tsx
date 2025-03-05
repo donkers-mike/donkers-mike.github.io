@@ -75,6 +75,17 @@ const components = {
 				</Link>
 			)
 		}
+		if (href?.startsWith("#")) {
+			return (
+				<a
+					href={href}
+					className="text-white hover:underline"
+					{...props}
+				>
+					{children}
+				</a>
+			)
+		}
 		return (
 			<a
 				href={href}

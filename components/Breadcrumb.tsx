@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import links from "@/content/links"
 import projects from "@/content/projects"
+import workexperiences from "@/content/work-experience"
 import { capitalizeFirstLetter } from "@/lib/utils"
 import Link from "next/link"
 
@@ -18,7 +19,13 @@ export default function Breadcrumb() {
 	const getBreadcrumbTitleForPath = (path: string) => {
 		const link = links.filter((link) => link.url === `/${path}`)[0]
 		const project = projects.filter((project) => project.key === path)[0]
+		const experience = workexperiences.filter(
+			(experience) =>
+				experience.company.name.toLowerCase().split(" ").join("-") ===
+				path,
+		)[0]
 
+		if (experience) return experience.company.name
 		if (project) return project.title
 		if (link) return link.text
 
@@ -26,7 +33,9 @@ export default function Breadcrumb() {
 	}
 
 	const pathname = usePathname()
+	if (pathname === "/not-found") return
 	const paths = pathname.split("/").filter(Boolean)
+
 	return (
 		<ShadBreadcrumb>
 			<BreadcrumbList>

@@ -1,11 +1,8 @@
 import Link from "next/link"
-import { Card, CardContent, CardHeader } from "../ui/card"
-import {
-	IconBook2,
-	IconBrandGithub,
-	IconExternalLink,
-} from "@tabler/icons-react"
+import { Card, CardContent } from "@/components/ui/card"
+import { IconBrandGithub } from "@tabler/icons-react"
 import SocialButton from "../SocialButton"
+import { Repositories } from "./Repositories"
 
 export default function GithubProfiles() {
 	return (
@@ -39,22 +36,14 @@ export default function GithubProfiles() {
 								Lua coding for World of Warcraft AddOns. Here I
 								go by the handle "Mythi Inaro"
 							</span>
-							<ul
-								aria-label="Most notable repositories"
-								className="before:content-[attr(aria-label)] mt-2 before:mb-1 before:block"
-							>
-								<li>
-									<Link
-										href="https://github.com/mythi-inaro/TeleportMenu"
-										target="_blank"
-										className="flex ml-4 hover:underline w-fit"
-									>
-										<IconBook2 className="mr-2" />{" "}
-										TeleportMenu
-										<IconExternalLink className="ml-2 w-4 h-4" />
-									</Link>
-								</li>
-							</ul>
+							<Repositories
+								repositories={[
+									{
+										name: "TeleportMenu",
+										url: "https://github.com/mythi-inaro/TeleportMenu",
+									},
+								]}
+							/>
 							<SocialButton
 								className="mt-2 w-fit self-end"
 								text="View my personal GitHub"

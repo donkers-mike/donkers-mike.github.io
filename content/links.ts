@@ -1,4 +1,5 @@
 import {
+	IconBlockquote,
 	IconFileCv,
 	IconHome,
 	IconListCheck,

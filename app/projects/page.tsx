@@ -37,6 +37,7 @@ export default function Projects() {
 										priority
 										alt={project.title}
 										className="rounded-md object-cover"
+										sizes="(min-width: 808px) 50vw, 100vw"
 										fill
 									/>
 								</AspectRatio>

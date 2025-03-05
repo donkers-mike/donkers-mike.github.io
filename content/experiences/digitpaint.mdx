@@ -1,0 +1,88 @@
+import Image from "next/image"
+import CoverBanner from '@/public/digitpaint_cover.png'
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+import {
+	IconBrandReact,
+	IconBrandNextjs,
+	IconBrandGraphql,
+	IconBrandPrisma
+} from "@tabler/icons-react"
+
+<AspectRatio ratio={2/1}>
+	<Image
+		className="rounded-md shadow-md"
+		fill
+		priority
+		src={CoverBanner}
+		alt="Digitpaint banner"
+	/>
+</AspectRatio>
+# Digitpaint
+###### Front end Developer
+<span className="capitalize text-muted-foreground">{new Date(Date.UTC(2022,
+10)).toLocaleDateString("nl-NL", { year: "numeric", month: "long", day:
+undefined })} - {new Date(Date.UTC(2023, 8)).toLocaleDateString("nl-NL", { year: "numeric", month: "long", day: undefined })}</span>
+
+---
+###### Tech Stack
+---
+###### <IconBrandReact /> [React](https://react.dev/)
+React was used for one of the many projects within Digitpaint
+###### <IconBrandNextjs /> [NextJS](https://nextjs.org/)
+NextJS was used for one of the in-house SAAS platforms [BackLogic](#project-backlogic)
+###### <IconBrandGraphql /> [GraphQL](https://graphql.org/)
+GraphQL was used as a query language for one of the SAAS platforms.
+###### <IconBrandPrisma /> [Prisma](https://www.prisma.io/)
+Prisma was used to set up our database in one of the SAAS platforms.
+
+
+---
+###### Summary
+---
+- Working with a very broad tech stack & migrating this to a React
+frontend with a NodeJS backend architecture.
+- In my role as lead developer made choices for, designed and
+implemented key systems within the architecture.
+- Short lines with customers to best translate their wishes into use
+cases.
+
+---
+###### Reason for leaving
+--- 
+At the time I was working at Digitpaint the workload became less and less, which
+was felt throughout the company. I personally did not have the feeling that this
+was going to recover in a timely manner, which was one of the reasons I took my
+leave. 
+
+Besides the above, I had several moments of disagreements with the owner of the
+company which were not resolved in a manner which I could handle to a point
+where it wouldn't affect my views. This was also partly my own fault, due to how
+I handled those types of situations at that time.
+
+---
+###### My responsibilities
+---
+My responsibilities at Digitpaint were mostly limited to the frontend, with a
+small portion of my focus going to the backend if needed.
+
+Within these responsibilities I had several projects going for which I either
+was the de facto lead developer or one of the frontend developers.
+<br />
+###### Actief Leren Lezen
+Actief leren lezen was a two-sided application, one which was a admin panel for
+teachers, the other being a PWA for students. This project was built in React
+with a custom database to store needed data. This database was a MySQL database
+with TypeORM to build the queries.
+<br />
+###### BackLogic
+BackLogic was a (in my eyes very ambitious) project to change the way we look at
+our backlog. The idea was to bring logic into the way issues (or tickets) would
+go through the flow. 
+
+This was a challenging, yet very educational project for which I was the de
+facto lead developer. With the start of the project, I decided on using NextJS
+as the framework to be able to lean on its systems. Within this framework I used
+Prisma for the database, this allowed me to write shared interfaces that would
+be used for both the frontend and the database. 
+To query said database, I chose to use GraphQL to only fetch what I needed,
+where I needed it.

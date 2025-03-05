@@ -4,6 +4,8 @@ import Stultiens from "@/public/stultiens.png"
 import ucw from "@/public/ucw.png"
 import ReactMigration from "@/public/react-migration.png"
 import DotnetToReact from "@/public/dotnet-to-react.png"
+import VVVStoreLocator from "@/public/vvv-storelocator.png"
+
 export type NoteworthyProjects = {
 	key: string
 	title: string
@@ -41,6 +43,12 @@ const projects: NoteworthyProjects[] = [
 		title: "Migration of .NET to React",
 		intro: "The migration of a ~20 year old monolith to React",
 		preview: DotnetToReact,
+	},
+	{
+		key: "vvv-storelocator",
+		title: "VVV Storelocator",
+		intro: "A Vue application to allow people that have a VVV Giftcard to quickly and easily find where they can use them",
+		preview: VVVStoreLocator,
 	},
 ]
 

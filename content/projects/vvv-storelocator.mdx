@@ -1,0 +1,73 @@
+import {
+	IconBrandVue,
+	IconBrandSass
+} from "@tabler/icons-react"
+import Image from "next/image"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+
+<AspectRatio ratio={16 / 9}>
+	<Image
+		className="rounded-md shadow-md object-cover"
+		fill
+		priority
+sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+		src="/vvv-storelocator.png"
+		alt="VVV Storelocator preview"
+	/>
+</AspectRatio>
+# VVV Storelocator
+Done in my role as [Front end Developer Magento at Proud Nerds](/work-experience/proud-nerds)
+
+---
+[Visit the site here](https://www.vvvcadeaukaarten.nl/besteden)
+___
+> The VVV is the Dutch Association for Tourism.
+___  
+### Tech stack:
+___
+######  <IconBrandVue /> [Vue](https://vuejs.org/)
+Used for the entire front-end of the application 
+######  <Image width="20" height="20" src="/magento-2-logo.svg" alt="magento 2 logo" /> [Magento](https://business.adobe.com/nl/products/magento/magento-commerce.html)
+Magento is the framework the Vue application was injected into.
+
+___
+### My Responsibilities
+___
+My responsibilities within this project were fully focused on expanding,
+maintaining and building new features within the Vue application.
+<br />
+To properly do my job within these responsibilities I used the following tech;
+######  <IconBrandVue /> [Vue](https://vuejs.org/)
+###### <IconBrandSass /> [SCSS](https://sass-lang.com/)
+---
+### Challenges
+___
+One of the biggest challenges within this projects was, to me, the API and how
+the data we needed was supplied. The way this was set up did not make sense to
+me and I felt like we had to jump through far too many hoops to get our features
+built.
+
+One example I doubt I'll ever forget is that the only way (at the time) to get
+certain data to be properly parsed was to nest 5 (yes, FIVE) foreach loops
+within eachother, giving birth to this monstrosity of code;
+<br/>
+```
+stem.forEach(function(branch, i) {
+	branch.forEach(function(twig, j) {
+		twig.forEach(function(petiole, k) {
+			petiole.forEach(function(leaf, x) {
+				leaf.nodes.forEach(function(node, y) {
+					// we're finally at all the data nodes
+				})	
+			})
+		})
+	})
+})
+```
+<br/>
+Sadly, it wasn't only in the very last loop that we needed to do things, we also
+needed to either grab data or do something with data from the higher-level
+loops. 
+
+This meant we had to keep a very close eye on performance as this could very
+easily get out of hand.
