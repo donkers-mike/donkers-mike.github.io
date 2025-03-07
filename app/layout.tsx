@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { ArrowUpToLine } from "lucide-react"
 import logo from "@/public/logo.svg"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -29,6 +30,7 @@ export default function RootLayout({
 			className={`dark ${inter.className}`}
 			style={{ scrollBehavior: "smooth" }}
 		>
+			<Analytics />
 			<body className="min-h-full p-2 mb-15">
 				<div className="w-full p-3 justify-center flex">
 					<Link href="/" className="w-28">
