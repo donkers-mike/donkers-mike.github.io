@@ -9,6 +9,7 @@ import { ScrollToTop } from "@/components/ScrollToTop"
 import { ArrowUpToLine } from "lucide-react"
 import logo from "@/public/logo.svg"
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -30,8 +31,7 @@ export default function RootLayout({
 			className={`dark ${inter.className}`}
 			style={{ scrollBehavior: "smooth" }}
 		>
-			<Analytics />
-			<body className="min-h-screen p-2 mb-15">
+			<body className="min-h-screen p-2 pb-15">
 				<div className="w-full p-3 justify-center flex">
 					<Link href="/" className="w-28">
 						<Image src={logo} alt="logo" priority />
@@ -49,6 +49,8 @@ export default function RootLayout({
 					<ArrowUpToLine />
 				</ScrollToTop>
 				<Navbar />
+				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	)
