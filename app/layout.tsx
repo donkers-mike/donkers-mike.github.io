@@ -31,7 +31,7 @@ export default function RootLayout({
 			style={{ scrollBehavior: "smooth" }}
 		>
 			<Analytics />
-			<body className="min-h-full p-2 mb-15">
+			<body className="min-h-screen p-2 mb-15">
 				<div className="w-full p-3 justify-center flex">
 					<Link href="/" className="w-28">
 						<Image src={logo} alt="logo" priority />
