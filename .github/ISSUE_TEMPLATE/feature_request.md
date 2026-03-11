@@ -7,21 +7,29 @@ assignees: ''
 
 ---
 
-### Description
-Please provide a clear and concise description of the feature you would like to request. Why is this feature important? How does it improve the project? Be as specific as possible.
-
-### Motivation
-What will this feature help you achieve? Please explain the reasoning behind your request.
-
-### Suggested Implementation
-(Optional) If you have a particular approach in mind for how this feature could be implemented, please share it. If you’re unsure, that’s okay! Just leave this section blank.
-
-### Additional Context
-(Provide any additional information about the feature request here. Attach screenshots, links, or references to similar features if applicable.)
-
-### Requirements/Dependencies
-(List any requirements or dependencies that need to be considered for this feature.)
+---
+name: Feature request
+about: Suggest an idea for this project
+title: "[Page][Tab (optional)]"
+labels: ''
+assignees: ''
 
 ---
 
-Thank you for your suggestion! We appreciate your input and will review your request as soon as possible.
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the request entails. Ex. As a user I want to be able to [...]
+
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
+
+**[Link to documentation](PASTE_LINK_HERE)**
+
+**[Link to design](PASTE_LINK_HERE)**
+
+**Additional context**
+Add any other context or screenshots about the feature request here.
+
+**Acceptance criteria**
+Ex;
+- [ ] Action X must perform operation Y
+- [ ] Single column on mobile, 2 columns on desktop.
