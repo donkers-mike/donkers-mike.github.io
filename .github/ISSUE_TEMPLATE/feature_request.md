@@ -13,9 +13,9 @@ A clear and concise description of what the request entails. Ex. As a user I wan
 **Describe the solution you'd like**
 A clear and concise description of what you want to happen.
 
-**Link to documentation**
+**[Link to documentation](PASTE_LINK_HERE)**
 
-**Link to design**
+**[Link to design](PASTE_LINK_HERE)**
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
